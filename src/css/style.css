@@ -3,6 +3,12 @@
 *::before {
   box-sizing: border-box;
 }
+:root {
+  --background-color: #979797;
+  --title: #1f314f;
+  --white: white;
+  --text: #7d889e;
+}
 
 img {
   max-width: 100%;
@@ -23,5 +29,51 @@ a {
 
 body {
   margin: 0;
-  background-image: url(../assets/images/sleep-cat.jpeg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  font-family: 'Outfit', sans-serif;
+}
+
+.main-container {
+  width: 320px;
+  border-radius: 20px;
+  background-color: var(--white);
+  padding: 16px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__image {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
+}
+
+.card-info {
+  width: 288px;
+  padding: 24px 16px 40px;
+}
+.card-info__title,
+.card-info__text {
+  margin: 0;
+  text-align: center;
+}
+
+.card-info__title {
+  color: var(--title);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.card-info__text {
+  color: var(--text);
+  font-size: 15px;
+  letter-spacing: 0.19px;
 }
